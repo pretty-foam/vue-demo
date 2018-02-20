@@ -16,7 +16,7 @@ const state={
   count:0,
   foodTotal:{},  //food detial
   slideCount:0,
-  ball:[false,false,false,false,false,false,false,false,false],
+  ball:[false,false,false,false,false,false,false,false,false],//小球
   height:0,
 };
 

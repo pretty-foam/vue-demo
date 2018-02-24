@@ -90,6 +90,8 @@
 ## 项目截图
 
 ![Watch the video](https://github.com/pretty-foam/vue-demo/blob/master/static/20180224_212755.gif)
+![Watch the video](https://github.com/pretty-foam/vue-demo/blob/master/static/gifeditor_20180224_215325.gif)
+![Watch the video](https://github.com/pretty-foam/vue-demo/blob/master/static/gifeditor_20180224_215648.gif)
 ### 安装与运行
 
 git clone https://https://github.com/pretty-foam/vue-demo

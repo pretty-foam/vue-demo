@@ -9,7 +9,7 @@
             </li>
           </ul>
         </div>
-        <div class="foods-wrapper" @touchend="position" ref="foods">
+        <div class="foods-wrapper" @click="position" ref="foods">
             <ul>
               <li class="foods-item" v-for="value in goods">
                 <h1 class="foods-title" >{{value.name}}</h1>
@@ -60,12 +60,12 @@
        ...mapState(['goods', 'classMap', 'touch'])
      },
      methods:{
-       ...mapMutations(['slide','position'])
+       ...mapActions(['slide','position'])
      },
      mounted(){
-       this.slide({el:this.$refs.menu,that:this});
-       this.slide({el:this.$refs.foods,that:this});
-       this.$store.state.slideCount=0;
+           this.slide({el:this.$refs.menu,that:this});//注册滑动事件
+           this.slide({el:this.$refs.foods,that:this});
+           this.$store.state.slideCount=0;     //横向滑动标识
      },
      components:{count,shoppingCart}
    }

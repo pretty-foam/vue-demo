@@ -1,12 +1,12 @@
 <template>
   <div class="count">
      <transition name="fade">
-       <span class="descreace icon-remove_circle_outline"  @touchstart.prevent="descreace()" v-show="foodTotal[name]"></span>
+       <span class="descreace icon-remove_circle_outline"  @touchstart.prevent.top="descreace()" v-show="foodTotal[name]"></span>
      </transition>
      <transition name="number">
        <span class="number" v-if="foodTotal[name]">{{foodTotal[name].number}}</span>
      </transition>
-    <span class="add icon-add_circle"  @touchstart.stop="add()"></span>
+    <span class="add icon-add_circle"  @touchstart.prevent="add()"></span>
    </div>
 
 
@@ -19,12 +19,12 @@
            ...mapState(['ball','price','count','foodTotal'])
          },
          methods:{
-           ...mapActions(['total','balls']),
+           ...mapMutations(['total','balls']),
            add(){
-             this.total({name:this.name,judge:true,that:this,price:this.data});
-             this.$store.state.count++;
-             this.$store.state.price+=this.data;
-             this.balls(event);
+             this.total({name:this.name,judge:true,that:this,price:this.data});//增加食物数据
+             this.$store.state.count++;                                          //购物车数量总计
+             this.$store.state.price+=this.data;                                //价格总计
+             this.balls(event)                                  //dom更新后执行小球动画
            },
            descreace(){
              this.total({judge:false,name:this.name,price:this.data});
@@ -32,7 +32,9 @@
              this.$store.state.price-=this.data
            }
          },
-         props:['data','name']
+         props:['data','name'],
+         created(){
+         }
        }
 </script>
 

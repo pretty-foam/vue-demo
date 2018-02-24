@@ -1,21 +1,78 @@
-# test
+# vue-demo
 
-> A Vue.js project
+> Vue.js 外卖
 
-## Build Setup
+## 结构
+.
+├── README.md
+├── build
+│   ├── build.js
+│   ├── check-versions.js
+│   ├── dev-client.js
+│   ├── dev-server.js
+│   ├── utils.js
+│   ├── vue-loader.conf.js
+│   ├── webpack.base.conf.js
+│   ├── webpack.dev.conf.js
+│   └── webpack.prod.conf.js
+├── config
+│   ├── dev.env.js
+│   ├── index.js
+│   └── prod.env.js
+├── src 
+│   ├── common
+│   │   ├── css
+│   │   ├── fonts
+│   │   ├── images
+│   │   └── stylus
+│   │   └── js
+│   │   │   └── api.js  滑动事件在这里
+│   ├── components
+│   │   ├── count
+│   │   │   └── count.vue  食物加载按钮
+│   │   ├── foodDetail
+│   │   │   └── foodDetail.vue 食物详情
+│   │   ├── goods
+│   │   │   ├── goods.vue
+│   │   ├── header
+│   │   │   └── header.vue
+│   │   ├── ratings
+│   │   │   └── ratings.vue
+│   │   ├── seller
+│   │   │   └── seller.vue
+│   │   ├── shoppingCart
+│   │   │   └── shoppingCart.vue
+│   │   ├── star
+│   │   │   └── star.vue 星星组件
+│   │   ├── tab
+│   │   │   └── tab.vue
+│   ├── router
+│   │   └── index.js
+│   └── vuex
+│   │    └──  store.js
+│   ├── App.vue
+│   ├── main.vue
 
-``` bash
-# install dependencies
-npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 项目截图
+
+![image](https://github.com/songhaoreact/vue-music/blob/master/static/1.png)
+
+
+### 安装与运行
+
+```
+git clone https://github.com/pretty-foam/vue-demo
+
+cd vue-demo
+
+npm i    //初始化
+
+npm run dev //服务端运行 访问 http://localhost:8080
+
+npm run build 项目打包
+
+
+

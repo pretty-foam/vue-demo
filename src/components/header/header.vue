@@ -18,11 +18,11 @@
                      </div>
 
                  </div>
-                 <div class="support-count" v-if="seller.supports" @touchstart.stop="showClass(seller.score)">
+                 <div class="support-count" v-if="seller.supports" @touchstart.stop="showClass()">
                        {{seller.supports.length}}个 >
                  </div>
            </div>
-           <div class="bulletin-wrapper" @touchstart="showClass(seller.score)">
+           <div class="bulletin-wrapper" @touchstart="showClass()">
               <span class="bulletin-title"></span>
                <span class="bulletin-text">{{seller.bulletin}}</span>
                <span class="count">> </span>
@@ -54,7 +54,7 @@
                  </div>
 
                </div>
-               <div class="detail-close" ><i class="icon-close" @touchstart.stop.prevent="detailShow()"></i></div>
+               <div class="detail-close" ><i class="icon-close" @touchstart.stop.prevent="showClass()"></i></div>
              </div>
            </transition>
 
@@ -72,11 +72,10 @@
     },
     methods:{
       ...mapMutations(['detailShow']),
-      ...mapActions(['showClass'])
-   },
-     created(){
-
-     },
+      showClass(){
+        this.$store.state.detailShow=!this.$store.state.detailShow     //blletin show
+      }
+    },
      components:{
        star
      }

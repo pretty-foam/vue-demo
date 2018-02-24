@@ -4,6 +4,7 @@
 
 ## 结构
 .
+<pre>
 ├── README.md
 ├── build
 │   ├── build.js
@@ -52,6 +53,7 @@
 │   │    └──  store.js
 │   ├── App.vue
 │   ├── main.vue
+</pre>
 ```
 
 ## 项目截图

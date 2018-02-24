@@ -52,7 +52,7 @@
 │   │    └──  store.js
 │   ├── App.vue
 │   ├── main.vue
-
+.
 
 ```
 

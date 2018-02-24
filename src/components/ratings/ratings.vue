@@ -53,7 +53,7 @@
 
 <script>
   import star from '../star/star.vue'
-  import {mapState,mapMutations} from 'vuex'
+  import {mapState,mapMutations,mapActions} from 'vuex'
   export default {
     computed:{
       ...mapState(['ratings'])
@@ -67,7 +67,8 @@
        }
     },
     methods:{
-      ...mapMutations(['slide']),
+      ...mapActions(['slide']),
+      //评论切换
       controlRate(number){
         switch(number){
           case 0:

@@ -1,8 +1,11 @@
 # vue-demo
+
 <pre>
 > Vue.js 外卖
-技术栈:vue2.0+vue-cli2.0+vuex+es6+vue-router+stylus
+技术栈:vue2.0+vue-cli2.0+vuex+es6+vue-router+stylus+express
 主要目的还是自己可以通过个人项目设计，从中发现问题，积累经验,与各位交流发现不足之处加以修改。
+感兴趣的可以来个star 0..0
+```
 ##实现功能
    1.移动端滑动事件
    2.弹框
@@ -15,8 +18,8 @@
 ##小小总结
     1.移动端滑动事件
        (1)选择
-            我选择用translate3D达到移动效果,通过绝对定位监听top就不用考虑了,因为每次移动都会reflow,消耗移动端性能代价太高了,
-            而translate具有绘图层,每次移动都是触发repaint,translate2D效果虽好,但不会触发gpu渲染
+            我选择用translate3D达到移动效果,通过绝对定位监听top就不用考虑了,因为每次移动都会reflow,消耗移动端性能代
+            价太高了,而translate具有绘图层,每次移动都是触发repaint,translate2D效果虽好,但不会触发gpu渲染
        (2)translate3D值获取
             通过window.getComputedStyle(el).transform获取得到一个矩阵,再进行字符串选取得到y轴变化数据
     2.小球运动
@@ -29,6 +32,7 @@
        利用import(),返回的是一个Promise对象,使用的时候就加载组件
     5.flex
        uc运行时 .menu-wrapper 的flex设置固定宽度失效了,我改成固定宽高,.foods-wrapper设置绝对定位自适应宽度
+```
 ## 结构
 .
 
@@ -85,8 +89,7 @@
 
 ## 项目截图
 
-![image](https://github.com/songhaoreact/vue-music/blob/master/static/1.png)
-
+![Watch the video](https://github.com/pretty-foam/vue-demo/blob/master/static/20180224_212755.gif)
 ### 安装与运行
 
 ```
@@ -99,5 +102,4 @@ npm run dev //服务端运行 访问 http://localhost:8080
 
 npm run build 项目打包
 
-感兴趣的可以来个star 0..0
 

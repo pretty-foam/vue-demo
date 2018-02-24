@@ -52,7 +52,7 @@
 </template>
 
 <script>
-   import {mapState,mapActions} from 'vuex'
+   import {mapState,mapMutations} from 'vuex'
    import count from '../count/count.vue'
    export default {
       computed:{
@@ -67,13 +67,15 @@
         }
      },
      methods:{
-       ...mapActions(['total']),
+       ...mapMutations(['total']),
+       //添加食物数据
        addFood(name,price){
          this.total({name:name,judge:true,that:this,price:price});
          this.$store.state.count++;
          this.$store.state.price+=price;
          this.show=!this.show
        },
+       //评论切换
        controlRate(number){
          switch(number){
            case 0:

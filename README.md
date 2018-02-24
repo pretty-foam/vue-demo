@@ -45,7 +45,7 @@
 │   ├── utils.js
 │   ├── vue-loader.conf.js
 │   ├── webpack.base.conf.js
-│   ├── webpack.dev.conf.js
+│   ├── webpack.dev.conf.js   这里express添加json数据加载
 │   └── webpack.prod.conf.js
 ├── config
 │   ├── dev.env.js
@@ -89,6 +89,8 @@
 
 ## 项目截图
 
+![Watch the video](https://github.com/pretty-foam/vue-demo/blob/master/static/20180224_212755.gif)
+![Watch the video](https://github.com/pretty-foam/vue-demo/blob/master/static/20180224_212755.gif)
 ![Watch the video](https://github.com/pretty-foam/vue-demo/blob/master/static/20180224_212755.gif)
 ### 安装与运行
 

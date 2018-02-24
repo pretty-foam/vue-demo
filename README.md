@@ -85,14 +85,13 @@
 │   ├── App.vue
 │   ├── main.vue
 </pre>
-```
+
 
 ## 项目截图
 
 ![Watch the video](https://github.com/pretty-foam/vue-demo/blob/master/static/20180224_212755.gif)
 ### 安装与运行
 
-```
 git clone https://https://github.com/pretty-foam/vue-demo
 
 cd vue-demo

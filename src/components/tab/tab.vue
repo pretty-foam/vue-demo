@@ -26,7 +26,6 @@
          text-align: center
          box-shadow 1px 2px 3px rgba(7,17,27,.15)
 
-
    &.tab-item
          flex: 1
       & .tab-item a

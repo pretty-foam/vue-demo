@@ -3,11 +3,9 @@
                <V-header></V-header>
                <tab></tab>
                <div class="content">
-                 <keep-alive>
                   <transition name="fade">
                     <router-view></router-view>
                   </transition>
-                 </keep-alive>
                </div>
         </div>
 
@@ -17,23 +15,18 @@
 <script >
        import header from './components/header/header.vue'
        import tab from './components/tab/tab.vue'
+       import {mapActions} from 'vuex'
        export default {
+         computed:{
+           ...mapActions(['send'])
+         }
+         ,
          components:{
            'V-header':header,
            tab
          },
          created(){
-           this.$http.get('/api/seller').then((res)=>{
-                 if(res.data.errno===0){
-                     this.$store.state.seller =res.data.data
-                 }
-           });
-           this.$http.get('/api/goods').then((res)=>{
-              res.data.errno===0?this.$store.state.goods=res.data.data:console.log('error')
-           });
-           this.$http.get('api/ratings').then((res)=>{
-              res.data.errno===0?this.$store.state.ratings=res.data.data:console.log('error')
-           })
+           this.send(this)
          }
        }
 </script>

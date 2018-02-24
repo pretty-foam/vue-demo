@@ -56,7 +56,7 @@
 </template>
 
 <script>
-  import {mapState,mapMutations} from 'vuex'
+  import {mapState,mapMutations,mapActions} from 'vuex'
   import star from '../star/star.vue'
    export  default {
      computed:{
@@ -66,7 +66,7 @@
        star
      },
      methods:{
-       ...mapMutations(['slide'])
+       ...mapActions(['slide'])
      },
      mounted(){
        this.slide({el:this.$refs.seller,that:this});

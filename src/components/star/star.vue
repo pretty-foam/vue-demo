@@ -13,6 +13,7 @@
            starClass:[]
          }
        },
+        //根据分数控制star
         mounted(){
            const on='star-on';
            const off='star-off';

@@ -1,5 +1,5 @@
 # vue-demo
-
+<pre>
 > Vue.js 外卖
 技术栈:vue2.0+vue-cli2.0+vuex+es6+vue-router+stylus
 主要目的还是自己可以通过个人项目设计，从中发现问题，积累经验,与各位交流发现不足之处加以修改。
@@ -31,7 +31,7 @@
        uc运行时 .menu-wrapper 的flex设置固定宽度失效了,我改成固定宽高,.foods-wrapper设置绝对定位自适应宽度
 ## 结构
 .
-<pre>
+
 ├── README.md
 ├── build
 │   ├── build.js

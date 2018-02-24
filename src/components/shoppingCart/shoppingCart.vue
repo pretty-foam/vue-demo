@@ -50,7 +50,7 @@
     import co from '../count/count.vue'
     export default {
       computed: {
-        ...mapState(['price', 'distributionFee','count','foodTotal','ball'])
+        ...mapState(['price', 'distributionFee','count','foodTotal','ball','height'])
       },
       data(){
         return{
@@ -69,27 +69,29 @@
          co
       },
       methods:{
+        //清空购物车
         empty(){
              this.$store.state.foodTotal={};
              this.$store.state.price=0;
              this.$store.state.count=0;
              this.show=!this.show
         },
+        //购物车显示隐藏
         controllshow(){
             this.show=!this.show;
         },
+        //cubic-bezier(.01,.98,.18,.99)
         beforeBall(index){
-          let lenght=this.$refs.cart.getBoundingClientRect().y-this.$store.state.height;
+          let lenght=this.$refs.cart.getBoundingClientRect().top-this.$store.state.height;
           this.$refs.ballsBox[index].style.opacity=0;
           this.$refs.ballsBox[index].style.transform='translateX(275px)';
           this.$refs.balls[index].style.transform=`translateY(${-lenght}px)`;
           this.$refs.icon.style.fontSize='22px';
-
         },
         enterBall(index){
-            //cubic-bezier(.01,.98,.18,.99)
+//cubic-bezier(.01,.98,.18,.99)
           this.$refs.ballsBox[index].style.transition='all .5s cubic-bezier(.01,.98,.18,.99)';
-          this.$refs.balls[index].style.transition='all .5s';
+          this.$refs.balls[index].style.transition='all .5s ';
         },
         afterBall(index){
           this.$refs.ballsBox[index].style.transform='translateX(10px)';
@@ -98,6 +100,7 @@
           this.$set(this.$store.state.ball,index,false);
           this.$refs.icon.style.fontSize='18px';
         },
+
         end(){
             alert('end')
         }
@@ -130,8 +133,10 @@
      line-height 30px
      padding 5px
      margin -18px 0 8px 10px
-     font-size 16px
+     font-size 18px
+     background  #141d27;
      .ballsBox
+       transition all 5s
        .balls
         position fixed
         display block
@@ -139,6 +144,7 @@
         height 20px
         background #75a0ff
         border-radius 50%
+
     .icon-js
      color white
      background #75a0ff
